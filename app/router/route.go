@@ -14,7 +14,7 @@ func Init(init *config.Initialization) *gin.Engine {
 	router.Use(gin.Recovery())
 
 	router.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"223.233.87.49"},  // Allow your frontend domain
+		AllowOrigins:     []string{"*"},  // Allow your frontend domain
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Content-Type", "Authorization"},
 		AllowCredentials: true,
