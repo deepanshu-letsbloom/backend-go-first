@@ -5,12 +5,15 @@ import (
 	"backend/config"
 	"os"
 
+	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
 
 func init() {
 	godotenv.Load()
 	config.InitLog()
+
+	gin.SetMode(gin.ReleaseMode)
 }
 
 func main() {
